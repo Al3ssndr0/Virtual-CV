@@ -1,0 +1,151 @@
+/* GENERAL CONFIG */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --teal-1: #004d4d;
+  --teal-2: #007777;
+  --teal-3: #00a3a3;
+  --teal-4: #66cccc;
+  --teal-5: #e0f7f7;
+  --text-dark: #222;
+  --text-light: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--teal-5);
+}
+
+/* HEADER */
+header {
+  background: var(--teal-1);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* SECTIONS */
+section {
+  padding: 3rem 12%;
+  transition: background-color 0.3s ease;
+}
+
+#aboutme {
+  background-color: var(--teal-5);
+}
+
+#education {
+  background-color: var(--teal-4);
+}
+
+#skills {
+  background-color: var(--teal-3);
+  color: var(--text-light);
+}
+
+#softskills {
+  background-color: var(--teal-4); /* tono intermedio entre skills y contacto */
+  color: var(--text-dark);
+  padding: 3rem 12%;
+}
+
+#contact {
+  background-color: var(--teal-2);
+  color: var(--text-light);
+}
+
+/* TITLES */
+h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-left: 6px solid var(--teal-1);
+  padding-left: 10px;
+}
+
+/* LISTS */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "•";
+  color: var(--teal-1);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* PARAGRAPHS */
+p {
+  margin-bottom: 10px;
+  text-indent: 1.5em;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--teal-1);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* ANIMATIONS */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GO UP BUTTON */
+#btnUp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--teal-2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#btnUp:hover {
+  background-color: var(--teal-3);
+  transform: scale(1.1);
+}
+
+#btnUp.show {
+  opacity: 1;
+}
